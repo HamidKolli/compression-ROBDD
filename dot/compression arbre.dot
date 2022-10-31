@@ -1,0 +1,38 @@
+digraph
+{
+x_3_60[label="x_3"];
+x_2_52[label="x_2"];
+x_3_60-> x_2_52 [label="false"]
+x_2_59[label="x_2"];
+x_3_60 -> x_2_59 [label="true"]
+x_2_52[label="x_2"];
+x_1_55[label="x_1"];
+x_2_52-> x_1_55 [label="false"]
+x_1_51[label="x_1"];
+x_2_52 -> x_1_51 [label="true"]
+x_1_55[label="x_1"];
+False_57[label="False"];
+x_1_55-> False_57 [label="false"]
+True_54[label="True"];
+x_1_55 -> True_54 [label="true"]
+x_1_51[label="x_1"];
+True_54[label="True"];
+x_1_51-> True_54 [label="false"]
+False_57[label="False"];
+x_1_51 -> False_57 [label="true"]
+x_2_59[label="x_2"];
+x_1_55[label="x_1"];
+x_2_59-> x_1_55 [label="false"]
+x_1_58[label="x_1"];
+x_2_59 -> x_1_58 [label="true"]
+x_1_55[label="x_1"];
+False_57[label="False"];
+x_1_55-> False_57 [label="false"]
+True_54[label="True"];
+x_1_55 -> True_54 [label="true"]
+x_1_58[label="x_1"];
+False_57[label="False"];
+x_1_58-> False_57 [label="false"]
+False_57[label="False"];
+x_1_58 -> False_57 [label="true"]
+}

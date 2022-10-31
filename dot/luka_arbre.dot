@@ -1,0 +1,38 @@
+digraph
+{
+(((False) (True)x_1) ((True) (False)x_1)x_2) (((False) (True)x_1) ((False) (False)x_1)x_2)x_3_45[label="(((False) (True)x_1) ((True) (False)x_1)x_2) (((False) (True)x_1) ((False) (False)x_1)x_2)x_3"];
+((False) (True)x_1) ((True) (False)x_1)x_2_37[label="((False) (True)x_1) ((True) (False)x_1)x_2"];
+(((False) (True)x_1) ((True) (False)x_1)x_2) (((False) (True)x_1) ((False) (False)x_1)x_2)x_3_45-> ((False) (True)x_1) ((True) (False)x_1)x_2_37 [label="false"]
+((False) (True)x_1) ((False) (False)x_1)x_2_44[label="((False) (True)x_1) ((False) (False)x_1)x_2"];
+(((False) (True)x_1) ((True) (False)x_1)x_2) (((False) (True)x_1) ((False) (False)x_1)x_2)x_3_45 -> ((False) (True)x_1) ((False) (False)x_1)x_2_44 [label="true"]
+((False) (True)x_1) ((True) (False)x_1)x_2_37[label="((False) (True)x_1) ((True) (False)x_1)x_2"];
+(False) (True)x_1_33[label="(False) (True)x_1"];
+((False) (True)x_1) ((True) (False)x_1)x_2_37-> (False) (True)x_1_33 [label="false"]
+(True) (False)x_1_36[label="(True) (False)x_1"];
+((False) (True)x_1) ((True) (False)x_1)x_2_37 -> (True) (False)x_1_36 [label="true"]
+(False) (True)x_1_33[label="(False) (True)x_1"];
+False_31[label="False"];
+(False) (True)x_1_33-> False_31 [label="false"]
+True_32[label="True"];
+(False) (True)x_1_33 -> True_32 [label="true"]
+(True) (False)x_1_36[label="(True) (False)x_1"];
+True_34[label="True"];
+(True) (False)x_1_36-> True_34 [label="false"]
+False_35[label="False"];
+(True) (False)x_1_36 -> False_35 [label="true"]
+((False) (True)x_1) ((False) (False)x_1)x_2_44[label="((False) (True)x_1) ((False) (False)x_1)x_2"];
+(False) (True)x_1_40[label="(False) (True)x_1"];
+((False) (True)x_1) ((False) (False)x_1)x_2_44-> (False) (True)x_1_40 [label="false"]
+(False) (False)x_1_43[label="(False) (False)x_1"];
+((False) (True)x_1) ((False) (False)x_1)x_2_44 -> (False) (False)x_1_43 [label="true"]
+(False) (True)x_1_40[label="(False) (True)x_1"];
+False_38[label="False"];
+(False) (True)x_1_40-> False_38 [label="false"]
+True_39[label="True"];
+(False) (True)x_1_40 -> True_39 [label="true"]
+(False) (False)x_1_43[label="(False) (False)x_1"];
+False_41[label="False"];
+(False) (False)x_1_43-> False_41 [label="false"]
+False_42[label="False"];
+(False) (False)x_1_43 -> False_42 [label="true"]
+}
