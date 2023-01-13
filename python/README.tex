@@ -1,0 +1,143 @@
+\documentclass{article}
+\setlength{\oddsidemargin}{10pt} 
+\setlength{\evensidemargin}{10pt}
+\setlength{\textwidth}{481pt}
+\usepackage[utf8]{inputenc}
+\usepackage{tabto}
+\usepackage{hyperref}
+\title{How To}
+\date{November 2022}
+
+\begin{document}
+
+\maketitle
+
+\section{Execution}
+- Toute l'exécution de ce projet repose sur un makefile qui automatise toutes les exécutions et tous les nettoyages des fichiers crees, le fichier \textbf{'Makefile'} est dans le  répertoire racine du code python du projet \textbf{'Python'}, donc pour exécuter une section du make vous devez installer \textbf{'make'} sur votre Système.
+
+- Pour les experimentation, on utilise \textbf{gnuplot} pour dessiner les graphes.
+\subsection{Intaller make}
+\subsubsection{Sous Linux}
+
+\tabto{1cm}\$ sudo apt install make
+    
+\subsubsection{Sous Mac}
+
+\tabto{1cm}\$ brew install make
+
+\subsubsection{Sous Windows}
+
+\tabto{1cm}\$ Suivez les instructions sur ce site \href{https://www.gnu.org/software/make/}{gnu.org}
+
+\subsection{Intaller gnuplot}
+\subsubsection{Sous Linux}
+
+\tabto{1cm}\$ sudo apt-get install gnuplot
+    
+\subsubsection{Sous Mac}
+
+\tabto{1cm}\$ sudo port install gnuplot
+
+\subsubsection{Sous Windows}
+
+\tabto{1cm}\$ Suivez les instructions sur ce site \href{http://www.astrosurf.com/buil/isis/lisa_start/howto_gnuplot.htm}{www.astrosurf.com}
+
+\section{Execution des tests}
+\subsection{Tester les fonctions d'outils}
+\subsubsection{Les fonctions d'outils}
+\tabto{1cm} - decomposition
+\tabto{1cm} - taille\_arbre\_compresse\_robdd
+\tabto{1cm} - completion
+\tabto{1cm} - table
+\tabto{1cm} - hash\_luka
+
+\subsubsection{Les fonctions d'outils testees}
+\tabto{1cm} - decomposition
+\tabto{1cm} - taille\_arbre\_compresse\_robdd
+\tabto{1cm} - completion
+\tabto{1cm} - table
+
+\subsubsection{Commande}
+\tabto{1cm}\$ make test\_tools
+
+\subsection{Tester les fonctions Tree}
+\subsubsection{Les fonctions Tree}
+\tabto{1cm} - makeLeaf
+\tabto{1cm} - makeNode
+\tabto{1cm} - cons\_arbre
+
+
+\subsubsection{Les fonctions Tree testees}
+\tabto{1cm} - makeLeaf
+\tabto{1cm} - makeNode
+\tabto{1cm} - cons\_arbre
+
+\subsubsection{Commande}
+\tabto{1cm}\$ make test\_tree
+
+\section{Execution du Main}
+
+\subsection{Commande}
+\tabto{1cm}\$ make exec\_main
+
+\subsection{Parametres d'entree et les fichiers de sortie}
+\subsubsection{Parametres d'entree}
+\tabto{1cm}- Un nombre qui représente une fonction booléenne par sa représentation binaire. Ce nombre sera demandé par le processus et sera entré par l'invite de commande.
+
+\subsubsection{Fichiers de sortie}
+\tabto{2cm} Tous les fichiers générés sont des \textit{.dot} qui permettent de dessiner les arbres, pour pouvoir le faire, il faut mettre ces fichiers sur le site \href{https://graphs.grevian.org/graph}{graphs.grevian.org}.Ces fichiers sont dans le répertoire \textbf{./dot}: 
+
+\tabto{1cm} -  compression\_arbre : qui dessine l'arbre compressé par la première méthode de compression
+\tabto{1cm} -  compression\_bdd : qui dessine l'arbre compressé par la deuxième méthode de compression qui est celle de ROBDD
+\tabto{1cm} -  cost\_arbre : qui dessine l'arbre non compressé de la fonction 
+\tabto{1cm} -  luka\_arbre : qui dessine l'arbre étiqueté par les mots Lukasiewicz non compressé de la fonction
+
+
+\section{Execution des experimentation}
+
+\subsection{Commande}
+\tabto{1cm}\$ make exec\_experimentation
+
+\subsection{Parametres d'entree et les fichiers de sortie}
+\subsubsection{Parametres d'entree}
+\tabto{1cm}- Un nombre qui représente le nombre de variables des fonctions booléennes. Ce nombre sera demandé par le processus et sera entré par l'invite de commande.
+
+\tabto{1cm}- le nombre  de fonctions booléennes a traite. Ce nombre sera demandé par le processus et sera entré par l'invite de commande.
+
+\subsubsection{Fichiers de sortie}
+
+\tabto{1cm} -  nombre\_var\{\textit{nombre de variable}\}.dat : represente les donnees de l'experimentation, il est dans le répertoire \textbf{./experimentation/gnuplot\_data}.
+
+\tabto{1cm} -  nombre\_var\{\textit{nombre de variable}\}.png : represente les graphes de l'experimentation, il est dans le répertoire \textbf{./experimentation/gnuplot\_diagrammes}.
+
+\section{Execution des experimentations des variables de 5 a 10}
+
+\subsection{Commande}https://www.overleaf.com/project/63872b8612cf0cec86587f8f
+\tabto{1cm}\$ make exec\_experimentations\_var\_10
+
+\subsection{Parametres d'entree et les fichiers de sortie}
+\subsubsection{Parametres d'entree}
+\tabto{1cm}Aucun parametres.
+
+\subsubsection{Fichiers de sortie}
+
+\tabto{1cm} -  nombre\_var\{\textit{nombre de variable}\}.dat : represente les donnees de l'experimentation, il est dans le répertoire \textbf{./experimentation/gnuplot\_data}.
+
+\tabto{1cm} -  nombre\_var\{\textit{nombre de variable}\}.png : represente les graphes de l'experimentation, il est dans le répertoire \textbf{./experimentation/gnuplot\_diagrammes}.
+
+\tabto{1cm} -  tab.md : represente le tableau de la figure 11 de l'artice \href{https://www-apr.lip6.fr/~genitrini/doc_ens/A_Theoretical_and_Numerical_Analysis_of_the_Worst.pdf}{A\_Theoretical\_and\_Numerical\_Analysis\_of\_the\_Worst}, il est dans le répertoire \textbf{./experimentation/}, pour voir le tableau clairement, utilisez le site \href{https://www.markdowntopdf.com/}{www.markdowntopdf.com} et selectionner le fichier \textit{tab.md}. Attention ce site va directement télécharger la conversion du fichier en PDF.
+
+
+\section{Nettoyage}
+\subsection{Nettoyage des .dot}
+\$ make clean\_dot
+\subsection{Nettoyage des donnees et diagrammes gnuplot}
+\$ make clean\_gnuplot
+\subsection{Nettoyage de la table des variables}
+\$ make clean\_tab
+\subsection{Nettoyage des executables python}
+\$ make clean
+\subsection{Nettoyage du projet}
+\$ make clean\_all
+
+\end{document}
